@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesión</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .login-box {
+            width: 300px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .login-box input[type="text"],
+        .login-box input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .login-box input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .login-box input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <hr><hr>
+    <table width = "100%" border="0">
+        <tr>
+            <td width="20%"><a href="acceso.admin.html"> <button>Productos</button></a></td>
+            <td width="7%"></td>
+            <td width="20%"><a href="acceso.admin.agregar.producto.html"> <button>Agregar producto</button></a></td>
+            <td width="7%"></td>
+            <td width="20%"><a href="acceso.admin.ver.ventas.html"><button>Ver ventas</button></a></td>
+            <td width="7%"></td>
+            <td width="20%"><a href="acceso.admin.cerrar.sesion.html"><button>Cerrar sesion</button></a></td>
+        </tr>
+    </table>
+    <h1>AGREGA UN NUEVO PRODUCTO: </h1>
+    <hr>
+    <form method="POST" action="http://'+ip+'/HelloSpringMVC/uploadFile" action="subirFoto();" enctype="multipart/form-data">
+    <table width="80%" border="0" align="center">
+
+        <tr>
+            <td width="40%" align="left">
+
+                Nombre: <br>
+                <input type="text" name="nombre_articulo" size = "50" required> <br><br>
+                Referencia: <br>
+                <input type="text" name="referencia" size = "50" required><br><br>
+                Categoria: <br>
+                <select name="categoria"required>
+                    <option value="">---</option>
+                    <option value="carros">Carros</option>
+                    <option value="motos">Motos</option>
+                  </select><br><br>
+                 
+
+
+            </td>
+            <td width="40%"> Cantidad: <br>
+                <select name="categoria"required>
+                    <option value="">---</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select><br><br>
+                  Imagen 
+                  
+                    <input type="file" name="file" required><br/>
+                  
+                </td>
+        </tr>
+    </table>
+<input type="submit" value="Cargar"></form>
+   
+   
+    
+    
+        
+</body>
+</html>

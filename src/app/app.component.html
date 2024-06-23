@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesión</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .login-box {
+            width: 300px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .login-box input[type="text"],
+        .login-box input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .login-box input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .login-box input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h2>Iniciar sesión</h2>
+        <form action="procesar_login.php" method="post">
+          <div center><strong><font color="green">Seleciona una opción</font></strong></div>
+          <hr>
+          <select name="identificador"required>
+            <option value="">---</option>
+            <option value="administrador">Administrador</option>
+            <option value="usuario">Usuario</option>
+          </select>
+          <br>
+          <br>
+            <input type="text" name="usuario" placeholder="Usuario" required>
+            <br>
+            <input type="password" name="clave" placeholder="Contraseña" required>
+            <br>
+            <input type="submit" value="Iniciar sesión">
+        </form>
+    </div>
+</body>
+</html>
